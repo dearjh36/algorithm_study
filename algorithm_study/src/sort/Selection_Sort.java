@@ -14,7 +14,18 @@ public class Selection_Sort {
 
         Collections.shuffle(nums);
 
-        
+        int[] arr = nums.stream().mapToInt(Integer::intValue).toArray();
+
+        selection_sort(arr);
+
+        for (int i : arr){
+            System.out.println(i);
+        }
+
+    }
+
+    private static void selection_sort(int[] a){
+        selecton_sort(a, a.length);
     }
 
     private static void selecton_sort(int[] a, int size){
